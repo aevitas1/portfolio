@@ -1,0 +1,45 @@
+.general-landing {
+    display: flex;
+    flex-flow: column;
+    min-height: 30vh;
+    justify-content: center;
+    align-items: center;
+    border-bottom: .3rem solid rgb(var(--clr-headings));
+    .h1 {
+        font-size: calc(1vmin + 2.8rem);
+        position: relative;
+        padding: 0;
+        line-height: 0;
+        margin: 0 auto;
+        &::before,
+        &::after {
+            font-family: 'Montserrat', sans-serif;
+            color: rgb(var(--clr-html));
+            font-style: italic;
+            font-size: 0.8rem;
+            position: relative;
+            letter-spacing: 0.05em;
+            font-weight: 400;
+        }
+    }
+    .t-g-l .h1::before {
+        content: '<h1>';
+        bottom: 3rem;
+    }
+    .t-g-r .h1::after {
+        content: '</h1>';
+        top: 1rem;
+    }
+    .t-g-l {
+        position: relative;
+        line-height: 0.7em;
+        right: 5rem;
+        bottom: 0.9rem;
+    }
+    .t-g-r {
+        position: relative;
+        line-height: 0.7em;
+        left: 3rem;
+        top: 0.9rem;
+    }
+}

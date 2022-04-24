@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
+    <title>Stephan | Calculator</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bg.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&family=Oswald:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <nav id="nav-wrapper">
+        <div id="btn-m">
+            <div id="m-circle">
+                <div id='top' class="menu-btn"></div>
+                <div id='middle' class="menu-btn"></div>
+                <div id='bottom' class="menu-btn"></div>
+            </div>
+        </div>
+        <div id="box">
+            <div class="logo">
+            </div>
+            <div id="items">
+                <div class="item"><a href="/">Home</a></div>
+                <div class="item"><a href="about">About</a></div>
+                <div class="item"><a href="/#projects">Work</a></div>
+                <div class="item"><a href="/#contact">Contact</a></div>
+            </div>
+            <div class="div" id="socials">
+                <span>
+                    <a href="https://www.linkedin.com/in/stephan-vd-m/" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/aevitas1" target="_blank"><i
+                            class="fab fa-github-square"></i></a>
+                </span>
+            </div>
+            <p></p>
+            <div id="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
+            </div>
+        </div>
+    </nav>
+
+    <main id="page-wrapper">
+        <section class="general-landing">
+            <span class="t-g-l">
+                <div class="h1">CALC</div>
+            </span>
+            <span class="t-g-r">
+                <div class="h1">ULATOR</div>
+            </span>
+            <br>
+        </section>
+
+        <ul class="breadcrumb">
+            <li><span class="link"><a href="/">Home</a></span></li>
+            <li class="bread-arrow"><i class="fas fa-chevron-right"></i></li>
+            <li class="bread-current">
+                <p>Calculator</p>
+            </li>
+        </ul>
+
+        <section class="container calc">
+            <div class="cnt-block">
+                <header class="ct-header">
+                    <div class="h1">
+                        Calculator
+                    </div>
+                    <p class="header-p">
+                        First big JavaScript project
+                    </p>
+                </header>
+                <div id="calculator">
+                    <div id="screen">
+                        <input id="result"></input>
+                        <input id="operator"></input>
+                    </div>
+                    <div id="keys">
+                        <div id="numbers">
+                            <div onclick="onClickNumber('7')">7</div>
+                            <div onclick="onClickNumber('8')">8</div>
+                            <div onclick="onClickNumber('9')">9</div>
+                            <div onclick="onClickNumber('4')">4</div>
+                            <div onclick="onClickNumber('5')">5</div>
+                            <div onclick="onClickNumber('6')">6</div>
+                            <div onclick="onClickNumber('1')">1</div>
+                            <div onclick="onClickNumber('2')">2</div>
+                            <div onclick="onClickNumber('3')">3</div>
+                            <div onclick="onClickNumber('.')">.</div>
+                            <div onclick="onClickNumber('0')">0</div>
+                            <div onclick="onClickEquals('=')">=</div>
+                        </div>
+                        <div id="operators">
+                            <div onclick="onClickCancel('C')">AC</div>
+                            <div onclick="onClickOperator('+')">+</div>
+                            <div onclick="onClickOperator('-')">-</div>
+                            <div onclick="onClickOperator('x')">x</div>
+                            <div onclick="onClickOperator('/')">/</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="page-footer">
+            <hr>
+            <div class="credit-footer">
+                <p>Designed by Stephan van der Meijden&nbsp;</p>
+                <p class="currentyear"></p>
+                <p>All rights reserved</p>
+            </div>
+        </footer>
+    </main>
+<script src="js/calc.js" defer></script>
+</body>

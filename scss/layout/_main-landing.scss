@@ -1,0 +1,184 @@
+$mouse-width: 2.5rem;
+$landing-delay: 2s;
+$landing-duration: 1s;
+
+.scroll-down:not(.scroll-link, .mouse, .scroll),
+.hide__anim {
+  opacity: 0;
+  animation: main-landing-text 2s ease-in $landing-delay forwards;
+}
+
+@keyframes main-landing-text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes bounceLeft {
+  0%,
+  60%,
+  75%,
+  90%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: translate3d(-3000px, 0, 0) scaleX(3);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(30px, 0, 0) scaleX(0.8);
+  }
+  75% {
+    transform: translate3d(-10px, 0, 0) scaleX(0.9);
+  }
+  90% {
+    transform: translate3d(5px, 0, 0) scaleX(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+@keyframes bounceRight {
+  0%,
+  60%,
+  75%,
+  90%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: translate3d(3000px, 0, 0) scaleX(3);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(-30px, 0, 0) scaleX(0.8);
+  }
+  75% {
+    transform: translate3d(10px, 0, 0) scaleX(0.9);
+  }
+  90% {
+    transform: translate3d(-5px, 0, 0) scaleX(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+.landing {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  .h1 {
+    font-size: calc(1vmin + 2.8rem);
+    position: relative;
+    padding: 0;
+    line-height: 0;
+    margin: 0 auto;
+  }
+
+  .h1::before,
+  .h1::after {
+    font-family: "Montserrat", sans-serif;
+    color: rgb(var(--clr-html));
+    font-style: italic;
+    font-size: 0.8rem;
+    position: relative;
+    letter-spacing: 0.05em;
+    font-weight: 400;
+  }
+
+  .tl .h1::before {
+    content: "<h1>";
+  }
+  .tr .h1::after {
+    content: "</h1>";
+  }
+
+  span {
+    display: flex;
+    flex-direction: row;
+    top: 0.35rem;
+  }
+
+  .tl .h1 {
+    right: 2rem;
+    position: relative;
+    line-height: 0.7em;
+    bottom: 0.3rem;
+    color: rgb(var(--clr-headings));
+    &::before {
+      bottom: 3rem;
+    }
+  }
+
+  .tr .h1 {
+    left: 3.5rem;
+    position: relative;
+    line-height: 0.7em;
+    color: rgb(var(--clr-main));
+    &::after {
+      color: rgb(212, 207, 207);
+      top: 1rem;
+    }
+  }
+  .welcome-text {
+    user-select: none;
+  }
+  .tl {
+    animation: bounceLeft;
+  }
+  .tr {
+    animation: bounceRight;
+  }
+  .tl,
+  .tr {
+    animation-duration: $landing-duration;
+    animation-delay: $landing-delay;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+  }
+}
+
+.mouse {
+  max-width: $mouse-width;
+  width: 100%;
+  height: 4rem;
+}
+.scroll {
+  animation-delay: $landing-delay;
+  animation-name: scroll;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.65, -0.55, 0.25, 1.5);
+  animation-iteration-count: infinite;
+  transform-origin: 50% 20.5px;
+  will-change: transform, opacity;
+  opacity: 1;
+}
+
+.scroll-link {
+  position: absolute;
+  top: 75vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@keyframes scroll {
+  0%,
+  20% {
+    transform: translateY(0) scaleY(1);
+  }
+
+  100% {
+    transform: translateY(36px) scaleY(2);
+    opacity: 0;
+  }
+}

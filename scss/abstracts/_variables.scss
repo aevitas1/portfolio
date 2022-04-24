@@ -1,0 +1,66 @@
+:root {
+  --duration: 0.5s;
+  --timing: linear;
+  --underline-transition: 0.5s;
+}
+
+//light mode
+$clr-headings: 66, 86, 100;
+$clr-main: 246, 244, 242;
+$clr-nav: 221, 220, 219;
+$clr-p: 13, 13, 13;
+$clr-btn: 131, 131, 131;
+$clr-icons: 27, 27, 27;
+$clr-html: 71, 71, 71;
+$underline-width: 3px;
+$underline-block-width: 22px;
+$underline-color: hsla(204.7, 20.5%, 32.5%, 0.5);
+$underline-color-hover: hsla(204.7, 20.5%, 32.5%, 1);
+$clr-card: 230, 230, 230;
+$clr-card-border: 66, 86, 100;
+//dark mode
+$dark-clr-headings: 131, 131, 131;
+$dark-clr-main: 13, 13, 13;
+$dark-clr-nav: 1, 1, 1;
+$dark-clr-p: 252, 246, 245;
+$dark-clr-btn: 87, 86, 86;
+$dark-clr-icons: 256, 246, 245;
+$dark-clr-html: 185, 184, 184;
+$dark-underline-width: 3px;
+$dark-underline-block-width: 20px;
+$dark-underline-color: hsla(0, 0%, 51.4%, 0.5);
+$dark-underline-color-hover: hsla(0, 0%, 51.4%, 1);
+$dark-clr-card: 44, 44, 44;
+$dark-clr-card-border: 252, 246, 245;
+
+.light {
+  --clr-headings: #{$clr-headings};
+  --clr-main: #{$clr-main};
+  --clr-nav: #{$clr-nav};
+  --clr-p: #{$clr-p};
+  --clr-btn: #{$clr-btn};
+  --clr-icons: #{$clr-icons};
+  --clr-html: #{$clr-html};
+  --underline-width: #{$underline-width};
+  --underline-block-width: #{$underline-block-width};
+  --underline-color: #{$underline-color};
+  --underline-color-hover: #{$underline-color-hover};
+  --clr-card: #{$clr-card};
+  --clr-card-border: #{$clr-card-border};
+}
+
+.dark {
+  --clr-headings: #{$dark-clr-headings};
+  --clr-main: #{$dark-clr-main};
+  --clr-nav: #{$dark-clr-nav};
+  --clr-p: #{$dark-clr-p};
+  --clr-btn: #{$dark-clr-btn};
+  --clr-icons: #{$dark-clr-icons};
+  --clr-html: #{$dark-clr-html};
+  --underline-width: #{$dark-underline-width};
+  --underline-block-width: #{$dark-underline-block-width};
+  --underline-color: #{$dark-underline-color};
+  --underline-color-hover: #{$dark-underline-color-hover};
+  --clr-card: #{$dark-clr-card};
+  --clr-card-border: #{$dark-clr-card-border};
+}

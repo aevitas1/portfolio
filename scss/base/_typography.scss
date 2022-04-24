@@ -1,0 +1,92 @@
+@use "../abstracts/variables";
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+p {
+  color: rgb(var(--clr-p));
+  font-size: calc(0.625vmin + 0.754rem);
+  line-height: 1.5em;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+.h1,
+.h2,
+.h3,
+.h4 {
+  font-family: "Oswald", sans-serif;
+  color: rgb(var(--clr-headings));
+  font-weight: 700;
+  padding-bottom: 0.5rem;
+}
+
+/* (1280,72)(320,40) */
+h1,
+.h1 {
+  font-size: calc(3.334vmin + 1.834rem);
+}
+
+/* (1280,64)(320,35) */
+h2,
+.h2 {
+  font-size: calc(3.021vmin + 1.584rem);
+}
+
+/* (1280,54)(320,33) */
+h3,
+.h3 {
+  font-size: calc(2.188vmin + 1.625rem);
+}
+
+/* (1280,40)(320,27) */
+h4,
+.h4 {
+  font-size: calc(1.355vmin + 1.417rem);
+}
+
+.header-p {
+  font-size: calc(0.5vmin + 1.4rem);
+  color: rgb(var(--clr-headings));
+  font-weight: 300;
+}
+
+i {
+  color: rgb(var(--clr-icons));
+}
+.link {
+  width: 100%;
+}
+
+.link a {
+  font-size: calc(0.625vmin + 0.75rem);
+  color: rgb(var(--clr-p));
+  background-image: linear-gradient(
+      90deg,
+      rgb(var(--clr-main)),
+      rgb(var(--clr-main))
+    ),
+    linear-gradient(90deg, var(--underline-color), var(--underline-color));
+  background-size: var(--underline-block-width) var(--underline-width),
+    100% var(--underline-width);
+  background-repeat: no-repeat;
+  background-position-x: calc(var(--underline-block-width) * -1), 0;
+  background-position-y: 100%;
+  transition: background-position-x var(--underline-transition);
+}
+.link a:hover {
+  background-image: linear-gradient(
+      90deg,
+      rgb(var(--clr-main)),
+      rgb(var(--clr-main))
+    ),
+    linear-gradient(
+      90deg,
+      var(--underline-color-hover),
+      var(--underline-color-hover)
+    );
+  background-position-x: calc(100% + var(--underline-block-width)), 0;
+}

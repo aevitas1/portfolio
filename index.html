@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
+    <title>Stephan | Front End Developer</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&family=Oswald:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/contact.js" defer></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+</head>
+
+<body id="home">
+    <nav id="nav-wrapper">
+        <div id="btn-m" class="hide__anim">
+            <div id="m-circle">
+                <div id='top' class="menu-btn"></div>
+                <div id='middle' class="menu-btn"></div>
+                <div id='bottom' class="menu-btn"></div>
+            </div>
+        </div>
+        <div id="box">
+            <div class="logo">
+            </div>
+            <div id="items">
+                <div class="item link-active"><a href="/">Home</a></div>
+                <div class="item"><a href="about">About</a></div>
+                <div class="item"><a href="#projects">Work</a></div>
+                <div class="item"><a href="#contact">Contact</a></div>
+            </div>
+            <div class="div" id="socials">
+                <span>
+                    <a href="https://www.linkedin.com/in/stephan-vd-m/" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/aevitas1" target="_blank"><i class="fab fa-github-square"></i></a>
+                </span>
+            </div>
+            <p></p>
+            <div id="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
+            </div>
+        </div>
+    </nav>
+    <main id="page-wrapper">
+        <section class="landing" id="main-landing">
+            <div class="welcome-text">
+                <span class="tl">
+                    <div class="h1">HEL</div>
+                </span>
+                <span class="tr">
+                    <div class="h1">LO</div>
+                </span>
+                <br>
+            </div>
+            <div class="scroll-down">
+                <a class="scroll-link" href="#about">
+                    <svg class="mouse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 130"
+                        preserveAspectRatio="xMidYMid meet">
+                        <g fill="none" fill-rule="evenodd">
+                            <rect width="70" height="118" x="1.5" y="1.5" stroke="var(--clr-p)" stroke-width="3"
+                                rx="36" />
+                            <circle class="scroll" cx="36.5" cy="31.5" r="4.5" fill="var(--clr-p)" />
+                        </g>
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <section class="container index-about" id="about">
+            <div class="ct-block">
+                <header class="ct-header">
+                    <h1>I'm Stephan, <br>
+                        <div class="header-p header-index">Front End Developer
+                        </div>
+                    </h1>
+                </header>
+
+                <div class="text-block">
+                    <p>I committed to web development in 2021. My area of expertise is front-end.<br><br>Right now I'm
+                        fully focussed on learning everything in React.<br><br>I'm available for job offers.<br></p>
+
+                    <div class="button-wrapper"> <a href="#contact">
+                            <button class="button">
+                                Contact me
+                            </button></a>
+                    </div>
+                </div>
+                <footer class="ct-footer"><span class="link"><a href="about">Read more...</a></span></footer>
+            </div>
+
+
+            <div class="ct-block">
+                <header class="ct-header">
+                    <div class="h1">My skillset</div>
+                </header>
+                <div class="skill-set">
+                    <div class="text-block" id="skills">
+
+                        <span>
+                            <p>HTML</p><object data="images/HTML5.svg" type="image/svg+xml" alt="HTML logo"
+                                id="html"></object>
+                        </span>
+                        <span>
+                            <p>CSS</p><object data="images/CSS3.svg" type="image/svg+xml" alt="CSS logo"
+                                id="css"></object>
+                        </span>
+                        <span>
+                            <p>JavaScript</p><object data="images/Javascript.svg" type="image/svg+xml"
+                                alt="JavaScript logo" id="js"></object>
+                        </span>
+
+                        <span>
+                            <p>Bootstrap 5</p><object data="images/bootstrap-5-1.svg" type="image/svg+xml"
+                                alt="Bootstrap logo" id="bootstrap"></object>
+                        </span>
+                        <span>
+                            <p>SASS</p><object data="images/sass.svg" type="image/svg+xml" alt="Sass logo"
+                                id="sass"></object>
+                        </span>
+                        <span>
+                            <p>React.js</p><object data="images/reactjs-ar21.svg" type="image/svg+xml" alt="React logo"
+                                id="react"></object>
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="container index-projects" id="projects">
+            <div class="ct-block my-projects">
+                <header class="ct-header">
+                    <div class="h1">My work</div>
+                </header>
+                <div class="card-row">
+
+                    <a href="https://react-trivia-app20.netlify.app/" target="_blank" class='card'>
+                        <div class="card-top">
+                            <h4 class="text-shadow">Quiz App</h4>
+                        </div>
+                        <div class="card-body quiz_app"></div>
+                        <div class="card-footer">
+                            <div class="project_skills">
+                                <p>HTML | CSS | React</p>
+                                <object data="images/HTML5.svg" type="image/svg+xml" alt="HTML logo" id="html">
+                                </object>
+                                <object data="images/CSS3.svg" type="image/svg+xml" alt="CSS logo" id="css"></object>
+                                <object data="images/reactjs-ar21.svg" type="image/svg+xml" alt="React logo"
+                                    id="react"></object>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://aevitas1.github.io/" target="_blank"  class='card'>
+                        <div class="card-top">
+                            <h4 class="text-shadow">Foodfreedom</h4>
+                        </div>
+                        <div class="card-body foodfreedom"></div>
+                        <div class="card-footer">
+                            <div class="project_skills">
+                                <p>HTML | CSS | Bootstrap</p>
+                                <object data="images/HTML5.svg" type="image/svg+xml" alt="HTML logo" id="html"></object>
+                                <object data="images/CSS3.svg" type="image/svg+xml" alt="CSS logo" id="css"></object>
+                                <object data="images/bootstrap-5-1.svg" type="image/svg+xml" alt="Bootstrap logo"
+                                    id="bootstrap"></object>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="memory" target="_blank"  class='card'>
+                        <div class="card-top">
+                            <h4 class="text-shadow">Memory game</h4>
+                        </div>
+                        <div class="card-body memory"></div>
+                        <div class="card-footer">
+                            <div class="project_skills">
+                                <p>HTML | CSS | JavaScript</p>
+                                <object data="images/HTML5.svg" type="image/svg+xml" alt="HTML logo" id="html"></object>
+                                <object data="images/CSS3.svg" type="image/svg+xml" alt="CSS logo" id="css"></object>
+                                <object data="images/Javascript.svg" type="image/svg+xml" alt="JavaScript logo"
+                                    id="js"></object>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="calculator" target="_blank" class='card'>
+                        <div class="card-top">
+                            <h4 class="text-shadow">Calculator</h4>
+                        </div>
+                        <div class="card-body calc"></div>
+                        <div class="card-footer">
+                            <div class="project_skills">
+                                <p>HTML | CSS | JavaScript</p>
+                                <object data="images/HTML5.svg" type="image/svg+xml" alt="HTML logo" id="html"></object>
+                                <object data="images/CSS3.svg" type="image/svg+xml" alt="CSS logo" id="css"></object>
+                                <object data="images/Javascript.svg" type="image/svg+xml" alt="JavaScript logo"
+                                    id="js"></object>
+                            </div>
+                        </div>
+                    </a>
+
+
+                    <a href="javascript:void()" class='card'>
+                        <div class="card-top">
+                            <h4 class="text-shadow">Portfolio</h4>
+                        </div>
+                        <div class="card-body portfolio"></div>
+                        <div class="card-footer">
+                            <div class="project_skills">
+                                <p>HTML | SASS | JavaScript</p>
+                                <object data="images/HTML5.svg" type="image/svg+xml" alt="HTML logo" id="html"></object>
+                                <object data="images/sass.svg" type="image/svg+xml" alt="Sass logo" id="sass"></object>
+                                <object data="images/Javascript.svg" type="image/svg+xml" alt="JavaScript logo"
+                                    id="js"></object>
+                            </div>
+                        </div>
+                    </a>
+
+
+
+                </div>
+            </div>
+        </section>
+
+        <section class="container-contact" id="contact">
+            <div class="ct-block">
+                <header class="ct-header">
+                    <div class="h1">Contact</div>
+                    <p class="header-p">Want to hire me or have a question?</p>
+                </header>
+                <form id="contact-form" method="post" action="php/contact-form.php">
+
+                    <div class="contact-top">
+                        <div class="form-group-name">
+
+                            <div class="name-input">
+                                <input type="text" id="Name" name="name" class="form-name" placeholder="Name" required>
+                            </div>
+
+
+
+                        </div>
+                        <div class="form-group-email">
+                            <div class="email-input">
+                                <input type="email" id="Email" name="email" class="form-email" placeholder="Email"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group-message">
+                        <div class="message-input">
+                            <textarea id="Message" name="message" class="form-text" rows="6" maxlength="3000"
+                                placeholder="Message" required></textarea>
+                        </div>
+                    </div>
+                    <div class="button-form-group button-wrapper">
+                        <button type="submit" id="fcf-button" class="button" value="Send">Send</button>
+                    </div>
+
+                    <div id="form-messages">
+                        <div id="form-success"></div>
+                        <div id="form-errors"></div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+
+
+
+        <footer class="page-footer">
+            <hr>
+            <div class="credit-footer">
+                <p>Designed by Stephan van der Meijden&nbsp;</p>
+                <p class="currentyear"></p>
+                <p>All rights reserved</p>
+            </div>
+        </footer>
+    </main>
+    <script>
+        window.addEventListener('load', (event) => {
+            indexAnim();
+        });
+    </script>
+</body>
+
+</html>

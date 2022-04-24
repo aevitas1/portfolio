@@ -1,0 +1,12 @@
+//custom changes
+body {
+    overflow-x: hidden;
+}
+body *,
+::before,
+::after {
+    transition: 
+    color var(--duration) var(--timing),
+    background-color var(--duration) var(--timing);
+    ;
+}

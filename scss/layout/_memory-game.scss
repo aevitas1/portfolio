@@ -1,0 +1,242 @@
+.memory-page .memory {
+  margin: 0 auto;
+}
+.container.memory {
+  flex-flow: column;
+  display: flex;
+  padding-top: 0rem;
+  border-radius: 20px;
+  background: rgba(var(--clr-headings), 0.7);
+  border: 1px solid rgba(var(--clr-p), 0.3);
+  width: 768px;
+  @media all and (max-width: 48rem) {
+    max-width: 90%;
+    justify-content: center;
+    align-items: center;
+  }
+  .top-container {
+    position: relative;
+    display: flex;
+    height: 10rem;
+    width: inherit;
+    top: 0;
+    justify-content: center;
+    border-bottom: none;
+    border-radius: 20px 20px 0 0;
+    background: rgba(var(--clr-headings), 0.7);
+    @media all and (max-width: 48rem) {
+      flex-flow: column;
+      height: max-content;
+      justify-content: center;
+      align-items: center;
+      max-width: 90%;
+    }
+    p {
+      color: rgb(246, 244, 242);
+    }
+    tr, th, td {
+      display: flex;
+      justify-content: center;
+    }
+    table {
+      position: relative;
+      padding: 0;
+      margin: 0;
+      height: 2rem;
+      line-height: 0;
+      @media all and (max-width: 48rem) {
+        width: max-content;
+      }
+      p {
+      text-align: center;
+      line-height: 1;
+    }
+    th, td {
+      position: relative;
+      width: 7rem;
+      @media all and (max-width: 48rem) {
+        width: 5rem;
+      }
+    }
+    tr:nth-child(odd) {
+      margin-top: 1.5rem;
+      background: rgba(var(--clr-p), 0.3);
+    }
+    tr:nth-child(even) {
+      background: rgba(var(--clr-p), 0.1);
+      margin-bottom: 1rem;
+    }
+    th:not(:last-child)::after,
+    td:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      height: 100%;
+      border-right: 1px solid rgb(var(--clr-p));
+    }
+  }
+  }
+  
+}
+@media all and (max-width: 48rem){
+  .middle-container {
+    display: flex;
+    flex-flow: column;
+    padding: 1rem 1rem;
+    .select-div {
+      padding-right: 1rem;
+      font-size: 1rem;
+    }
+  }
+  .bottom-container {
+    display: flex;
+    flex-flow: row;
+    #muteAudio {
+      bottom: 0;
+      top: 1.5rem;
+      right: 5.5rem;
+      font-size: 2.5rem;
+    }
+  }
+}
+
+.timer-cont {
+  width: max-content;
+  height: max-content;
+  background: black;
+  border-radius: 10px;
+  margin: auto 0;
+  margin-right: 1rem;
+}
+#timer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 0rem 0.5rem;
+  text-align: center;
+  margin: 1.5rem 0;
+  color: white;
+  font-size: 2.5rem;
+  font-family: 'Courier new', monospace;
+  line-height: 1.5;
+  @media all and (max-width: 84.5rem) {
+    font-size: 2rem;
+  }
+  @media all and (max-width: 48rem) {
+    padding: 0rem 0.2rem;
+    font-size: 1.5rem;
+  }
+}
+.fa-volume-up::after {
+  position: absolute;
+  content:'Disable sound';
+  font-size: 1rem;
+  width: max-content;
+  top: 3rem;
+  left: 4.5rem;
+}
+.fa-volume-mute::after {
+  position: absolute;
+  content:'Enable sound';
+  font-size: 1rem;
+  width: max-content;
+  top: 3rem;
+  left: 4.5rem;
+  color: rgba(245, 245, 245, 0.4);
+}
+#muteAudio {
+  position: relative;
+  font-size: 3rem;
+  padding-left: 6rem;
+  bottom: 1.5rem;
+  min-height: 8rem;
+  width: 5rem;
+}
+.fa-volume-mute {
+  color: rgba(245, 245, 245, 0.4);
+}
+.fa-volume-up {
+  color: rgb(245, 245, 245)
+}
+
+#field {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  $card-padding: 6px;
+  #field>div {
+  position: relative;
+  margin: $card-padding;
+  }
+  
+  .board4 {
+    flex: calc((100% - #{$card-padding} * 8) / 4);
+    max-width: calc((100% - #{$card-padding} * 8) / 4);
+  }
+  
+  .board5 {
+    flex: calc((100% - #{$card-padding} * 10) / 5);
+    max-width: calc((100% - #{$card-padding} * 10) / 5);
+  }
+  
+  .board6 {
+    flex: calc((100% - #{$card-padding} * 12) / 6);
+    max-width: calc((100% - #{$card-padding} * 12) / 6);
+  }
+  @media all and (max-width: 48rem) {
+    #field>div {
+      margin: 2px;
+    }
+    .board4 {
+      flex: calc((100% - 2px * 8) / 4);
+      max-width: calc((100% - 2px * 8) / 4);
+    }
+    .board5 {
+      flex: calc((100% - 2px * 10) / 5);
+      max-width: calc((100% - 2px * 10) / 5);
+    }
+    .board6 {
+      flex: calc((100% - 2px * 12) / 6);
+      max-width: calc((100% - 2px * 12) / 6);
+    }
+  }
+  
+  #reset-highscores {
+    font-size: 0.9rem;
+  }
+  .covered, .uncovered {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .uncovered { 
+    display: none; 
+  }
+
+  @keyframes matchError {
+    from {
+      box-shadow: 0px 0px 8px 6px red;
+    }
+    to {
+      box-shadow: none;
+    }
+  }
+  
+  @keyframes matchSuccess {
+    from {
+      transform: scale(1.1);
+      box-shadow: 0px 0px 8px 6px green;
+    }
+    to {
+      transform: scale(1);
+      box-shadow: none;
+    }
+  }

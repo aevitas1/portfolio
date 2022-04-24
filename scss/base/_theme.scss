@@ -1,0 +1,50 @@
+@use '../abstracts/variables';
+#theme-switch-wrapper::before {
+    content: 'Enable dark-mode';
+    color: rgb(var(--clr-p));
+    font-size: 1rem;
+    padding-top: 1rem;
+}
+
+body.dark {
+#theme-switch-wrapper::before {
+    content: 'Enable light-mode';
+}
+
+main {
+    background: url(../../images/dm_bg.png);
+}
+
+p,
+.link a,
+.header-p {
+    font-weight: 300;
+}
+
+img:not([src*='.svg'], .covered) {
+    filter: grayscale(50%);
+}
+
+#m-circle::before {
+    background: url(.../../images/logo_dm.png);
+}
+.logo {
+background-image: url('../../images/logo_dm.png'); }
+#skills #react {
+    mix-blend-mode: normal;
+}
+.card-body.calc {
+    background-image: url('../../images/projects/calc_dm.png');
+}
+.card-body.memory {
+    background-image: url('../../images/projects/mem_dm.png');
+}
+.card-body.portfolio {
+    background-image: url('../../images/projects/portfolio_dm.png');
+}
+.top-container {
+    p {
+        color: rgb(13, 13, 13);
+    }
+}
+}

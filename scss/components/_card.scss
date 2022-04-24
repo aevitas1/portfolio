@@ -1,0 +1,90 @@
+@use "../abstracts" as *;
+
+.card {
+  position: relative;
+  cursor: pointer;
+  height: auto;
+  width: 19rem;
+  margin: 1rem 1rem 0 0;
+  border-radius: 10px;
+  border: 1px solid rgba(var(--clr-card-border), 0.25);
+  background: rgba(var(--clr-card), 1);
+  transition: 250ms ease;
+  .project_skills .card_skills {
+    width: 1.5rem;
+    opacity: 1;
+    margin: 0 auto;
+    transition: 350ms ease;
+  }
+  @media (min-width: 767px) {
+    &:hover {
+      transform: translateY(-0.3rem);
+      transition: 250ms ease;
+      > .card-footer {
+        transform: translateY(0rem);
+        transition: 250ms ease;
+        .project_skills {
+          padding: 0 1rem;
+          margin: 0 auto;
+          transition: 250ms ease;
+          .card_skills {
+            opacity: 1;
+            width: 3rem;
+            height: 3rem;
+            padding: 0.3rem;
+          }
+        }
+      }
+    }
+  }
+  .card-top {
+    height: 3rem;
+    h4 {
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      line-height: 1.2;
+    }
+  }
+  .card-body {
+    position: relative;
+    margin: 0 auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 20rem;
+    width: 18rem;
+    z-index: 5;
+  }
+  .card-footer {
+    height: 8rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: 350ms ease;
+    @media (min-width: 767px) {
+      transform: translateY(-6rem);
+    }
+  }
+}
+.card-body.calc {
+  background-image: url("../../images/projects/calc_lm.png");
+}
+.card-body.foodfreedom {
+  background-image: url("../../images/projects/foodfreedom_index.png");
+}
+.card-body.portfolio {
+  background-image: url("../../images/projects/portfolio_lm.png");
+}
+.card-body.memory {
+  background-image: url("../../images/projects/mem_lm.png");
+}
+.card-body.quiz_app {
+  background-image: url("../../images/projects/quiz.png");
+}
+.text-shadow {
+  text-shadow: 5px 3px 0px rgba(var(--clr-card), 0.17);
+}
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+}
