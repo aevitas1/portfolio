@@ -564,7 +564,7 @@ input:focus, textarea:focus {
   background: rgba(var(--clr-card), 1);
   transition: 250ms ease;
 }
-.card .project_skills .card_skills {
+.card .project_skills object {
   width: 1.5rem;
   opacity: 1;
   margin: 0 auto;
@@ -584,7 +584,7 @@ input:focus, textarea:focus {
     margin: 0 auto;
     transition: 250ms ease;
   }
-  .card:hover > .card-footer .project_skills .card_skills {
+  .card:hover > .card-footer .project_skills object {
     opacity: 1;
     width: 3rem;
     height: 3rem;
@@ -611,7 +611,7 @@ input:focus, textarea:focus {
   z-index: 5;
 }
 .card .card-footer {
-  height: 8rem;
+  height: 6rem;
   border-radius: 10px;
   text-align: center;
   transition: 350ms ease;
@@ -1746,7 +1746,5 @@ main > .container ~ .container {
   }
 }
 
-.about-me,
-.right-now {
+.about-me {
   flex-direction: row;
-}/*# sourceMappingURL=style.css.map */
