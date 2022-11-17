@@ -25,7 +25,7 @@ if (!empty($_POST)) {
 
 
     if (empty($errors)) {
-        $toEmail = 'info@vandermeijden.design';
+        $toEmail = 'sfhvdmeijden@gmail.com';
         $emailSubject = 'New email from your contact form';
         $headers = ['From' => $email, 'Reply-To' => $email, 'Content-type' => 'text/html; charset=iso-8859-1'];
 
